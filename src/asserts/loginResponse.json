@@ -1,0 +1,18 @@
+{
+  "error": false,
+  "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS5taGZnbG9iYWwuY29tL2FwaS9jdXN0b21lci9sb2dpbiIsImlhdCI6MTc2ODAzNDIzMiwiZXhwIjoxNzY4MDM3ODMyLCJuYmYiOjE3NjgwMzQyMzIsImp0aSI6Ikh3bFU4OWM3NzBCQ2s3REMiLCJzdWIiOiI2MCIsInBydiI6IjFkMGEwMjBhY2Y1YzRiNmM0OTc5ODlkZjFhYmYwZmJkNGU4YzhkNjMifQ.OzUnIm7KyqvarXF1VRKkwZ5EnWcBVFjk2-SX_-hISKw",
+  "customer": {
+    "id": 60,
+    "fullname": "Anwer Hussain",
+    "email": "anwer@gmail.com",
+    "phone": "9949325577",
+    "status": "pending",
+    "created_at": "2026-01-10T08:34:49.000000Z",
+    "updated_at": "2026-01-10T08:34:49.000000Z",
+    "blood_group": null,
+    "date_of_birth": null,
+    "joining_date": null,
+    "card_number": null,
+    "deleted_at": null
+  }
+}

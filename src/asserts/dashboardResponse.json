@@ -1,0 +1,60 @@
+{
+    "promoCards": [
+      { "id": "1", "title": "Deals On", "image": "hot_deals.png" },
+      { "id": "2", "title": "Shop Today's Deals", "image": "todays_deals.png" },
+      { "id": "3", "title": "Uncategorized", "image": "uncategorized.png" }
+    ],
+    "buyAgainProducts": [
+      { "id": "1", "title": "RoyalTouch 300™ Nitrile Exam Gloves, 9.5\"", "price": "$24.99", "image": "gloves.png" },
+      { "id": "2", "title": "RoyalTouch 300™ Nitrile Exam Gloves, 9.5\"", "price": "$24.99", "image": "gloves.png" },
+      { "id": "3", "title": "RoyalTouch 300™ Nitrile Exam Gloves, 9.5\"", "price": "$24.99", "image": "gloves.png" }
+    ],
+    "recommendedProducts": [
+      { "id": "1", "title": "RoyalTouch 300™ Nitrile Exam Gloves, 9.5\"", "price": "$24.99", "image": "gloves.png" },
+      { "id": "2", "title": "RoyalTouch 300™ Nitrile Exam Gloves, 9.5\"", "price": "$24.99", "image": "gloves.png" },
+      { "id": "3", "title": "RoyalTouch 300™ Nitrile Exam Gloves, 9.5\"", "price": "$24.99", "image": "gloves.png" }
+    ],
+    "contentCards": [
+      { "id": "1", "title": "Fall Favorites", "image": "all_fav.png" },
+      { "id": "2", "title": "Essentials For You", "image": "all_fav.png" }
+    ],
+    "officeData": [
+      { "id": "1", "name": "SanFrancisco", "spend": "$67,000" },
+      { "id": "2", "name": "Chicago", "spend": "$63,000" },
+      { "id": "3", "name": "NewYork", "spend": "$45,000" }
+    ],
+    "orderBillingData": [
+      {
+        "id": "1",
+        "type": "order",
+        "title": "Order Summary",
+        "awaitingCount": 2,
+        "nextDeliveryDate": "Oct 16",
+        "viewLinkText": "viewOrderDetails"
+      },
+      {
+        "id": "2",
+        "type": "billing",
+        "title": "Billing",
+        "totalAmount": "4",
+        "overdueAmount": "1",
+        "viewLinkText": "View Order  Details"
+      },
+      {
+        "id": "3",
+        "type": "order",
+        "title": "Order Summary",
+        "awaitingCount": 5,
+        "nextDeliveryDate": "Nov 20",
+        "viewLinkText": "View Order Details"
+      },
+      {
+        "id": "4",
+        "type": "billing",
+        "title": "Billing",
+        "totalAmount": "8",
+        "overdueAmount": "2",
+        "viewLinkText": "View Order Details"
+      }
+    ]
+  }

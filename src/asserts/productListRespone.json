@@ -1,0 +1,125 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "RoyalTouch300™ Nitrile Exam Gloves, 9.5\"",
+        "price": "$24.99",
+        "rating": 4.5,
+        "reviewCount": 2300,
+        "deliveryInfo": "Get It Tomorrow",
+        "image": "gloves.png",
+        "isFavorite": false,
+        "actionButton": "Notify",
+        "isCompared": false
+      },
+      {
+        "id": 2,
+        "name": "Safe Guard Powder-Free General Purpose, Vinyl, Medium, 100/BX",
+        "price": "$19.99",
+        "rating": 4.5,
+        "reviewCount": 2300,
+        "deliveryInfo": "Get It By Oct 16",
+        "image": "gloves.png",
+        "isFavorite": false,
+        "actionButton": "Add To Cart",
+        "isCompared": false
+      },
+      {
+        "id": 3,
+        "name": "Safe Guard Powder-Free General Purpose, Vinyl, Medium, 100/BX",
+        "price": "$19.99",
+        "rating": 4.5,
+        "reviewCount": 2300,
+        "deliveryInfo": "Get It By Oct 16",
+        "image": "gloves.png",
+        "isFavorite": false,
+        "actionButton": "Add To Cart",
+        "isCompared": false
+      },
+      {
+        "id": 4,
+        "name": "NitriShield Stealth Nitrile Industrial Disposable Gloves, Black, 100/BX",
+        "price": "$22.49",
+        "rating": 4.6,
+        "reviewCount": 1450,
+        "deliveryInfo": "Get It Tomorrow",
+        "image": "gloves.png",
+        "isFavorite": false,
+        "actionButton": "Notify",
+        "isCompared": false
+      },
+      {
+        "id": 5,
+        "name": "SemperGuard Latex Powder-Free Gloves, Large, 100/BX",
+        "price": "$18.99",
+        "rating": 4.4,
+        "reviewCount": 980,
+        "deliveryInfo": "Get It By Oct 17",
+        "image": "gloves.png",
+        "isFavorite": false,
+        "actionButton": "Add To Cart",
+        "isCompared": false
+      },
+      {
+        "id": 6,
+        "name": "AMMEX Medical Clear Vinyl Exam Gloves, Medium, 100/BX",
+        "price": "$15.99",
+        "rating": 4.3,
+        "reviewCount": 1150,
+        "deliveryInfo": "Get It Tomorrow",
+        "image": "gloves.png",
+        "isFavorite": false,
+        "actionButton": "Add To Cart",
+        "isCompared": false
+      },
+      {
+        "id": 7,
+        "name": "MedPride Nitrile Exam Gloves, Blue, Box of 100",
+        "price": "$20.49",
+        "rating": 4.7,
+        "reviewCount": 3200,
+        "deliveryInfo": "Get It By Oct 18",
+        "image": "gloves.png",
+        "isFavorite": false,
+        "actionButton": "Notify",
+        "isCompared": false
+      },
+      {
+        "id": 8,
+        "name": "Basic Medical Clear Vinyl Gloves, Large, 100/BX",
+        "price": "$14.99",
+        "rating": 4.2,
+        "reviewCount": 890,
+        "deliveryInfo": "Get It Tomorrow",
+        "image": "gloves.png",
+        "isFavorite": false,
+        "actionButton": "Add To Cart",
+        "isCompared": false
+      },
+      {
+        "id": 9,
+        "name": "CarePlus Premium Nitrile Disposable Gloves, 100/BX",
+        "price": "$23.49",
+        "rating": 4.6,
+        "reviewCount": 1670,
+        "deliveryInfo": "Get It By Oct 19",
+        "image": "gloves.png",
+        "isFavorite": false,
+        "actionButton": "Notify",
+        "isCompared": false
+      },
+      {
+        "id": 10,
+        "name": "UltraGloves Latex Powder-Free Exam Gloves, Small, 100/BX",
+        "price": "$17.49",
+        "rating": 4.4,
+        "reviewCount": 760,
+        "deliveryInfo": "Get It Tomorrow",
+        "image": "gloves.png",
+        "isFavorite": false,
+        "actionButton": "Add To Cart",
+        "isCompared": false
+      }
+    ]
+  }
+  

@@ -1,0 +1,51 @@
+{
+    "id": "1",
+    "name": "Nitrile Disposable Gloves, One Size",
+    "rating": 5,
+    "reviewCount": 153254,
+    "price": "$24.99",
+    "estimatedShipTime": "2-3 weeks",
+    "deliveryLocation": "Houston 77006",
+    "isBackordered": true,
+    "backorderMessage": "Product is backordered",
+    "image": "gloves.png",
+    "description": [
+      "Black Gloves: Great for color coding systems, also available in Indigo",
+      "1st Choice Brand: Reliable hand protection carefully curated by industry experts",
+      "3 Mil Exam-Grade Gloves: Great for non-sterile medical, dental & veterinary use",
+      "Latex-Free Gloves: Ideal for those sensitive to natural rubber latex",
+      "Comfort: Feel rivals that of latex gloves with touchscreen compatibility"
+    ],
+    "specifications": [
+      {
+        "label": "Contains",
+        "value": "4 latex globes"
+      },
+      {
+        "label": "Latex Free",
+        "value": "Yes"
+      },
+      {
+        "label": "Package Quantity",
+        "value": "1/Pkg"
+      },
+      {
+        "label": "Size",
+        "value": "1.2 cc"
+      }
+    ],
+    "recommendedProducts": [
+      {
+        "id": "1",
+        "name": "White Dental Beauty At Home Whitening Full Patient Kit 10% Corb Prx..",
+        "price": "$19.99",
+        "image": "gloves.png"
+      },
+      {
+        "id": "2",
+        "name": "Safe Guard Powder-Free General Purpose, Vinyl Medium, 100/BX",
+        "price": "$24.99",
+        "image": "gloves.png"
+      }
+    ]
+  }
