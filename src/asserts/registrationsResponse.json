@@ -1,0 +1,38 @@
+{
+    "message": "Fetched successfully",
+    "data": [
+        {
+            "id": 1,
+            "registration_id": "REG-2025-001",
+            "full_name": "Ravi Kumar",
+            "date_of_birth": null,
+            "age": null,
+            "gender": "male",
+            "contact_number": "9876543210",
+            "parent_guardian_contact": null,
+            "marital_status": null,
+            "email": null,
+            "address": null,
+            "pincode": null,
+            "guardian_name": null,
+            "id_proof_type": null,
+            "id_proof_number": null,
+            "highest_qualification": null,
+            "other_qualification": null,
+            "medium_of_instruction": null,
+            "other_medium": null,
+            "school_college_name": null,
+            "school_college_location": null,
+            "education_gap_reason": null,
+            "courses": [
+                "computer",
+                "spoken english"
+            ],
+            "other_course": null,
+            "status": "pending",
+            "status_note": null,
+            "created_at": "2025-12-01T12:10:42.000000Z",
+            "updated_at": "2025-12-01T12:10:42.000000Z"
+        }
+    ]
+}

@@ -1,60 +1,157 @@
 {
-    "promoCards": [
-      { "id": "1", "title": "Deals On", "image": "hot_deals.png" },
-      { "id": "2", "title": "Shop Today's Deals", "image": "todays_deals.png" },
-      { "id": "3", "title": "Uncategorized", "image": "uncategorized.png" }
-    ],
-    "buyAgainProducts": [
-      { "id": "1", "title": "RoyalTouch 300™ Nitrile Exam Gloves, 9.5\"", "price": "$24.99", "image": "gloves.png" },
-      { "id": "2", "title": "RoyalTouch 300™ Nitrile Exam Gloves, 9.5\"", "price": "$24.99", "image": "gloves.png" },
-      { "id": "3", "title": "RoyalTouch 300™ Nitrile Exam Gloves, 9.5\"", "price": "$24.99", "image": "gloves.png" }
-    ],
-    "recommendedProducts": [
-      { "id": "1", "title": "RoyalTouch 300™ Nitrile Exam Gloves, 9.5\"", "price": "$24.99", "image": "gloves.png" },
-      { "id": "2", "title": "RoyalTouch 300™ Nitrile Exam Gloves, 9.5\"", "price": "$24.99", "image": "gloves.png" },
-      { "id": "3", "title": "RoyalTouch 300™ Nitrile Exam Gloves, 9.5\"", "price": "$24.99", "image": "gloves.png" }
-    ],
-    "contentCards": [
-      { "id": "1", "title": "Fall Favorites", "image": "all_fav.png" },
-      { "id": "2", "title": "Essentials For You", "image": "all_fav.png" }
-    ],
-    "officeData": [
-      { "id": "1", "name": "SanFrancisco", "spend": "$67,000" },
-      { "id": "2", "name": "Chicago", "spend": "$63,000" },
-      { "id": "3", "name": "NewYork", "spend": "$45,000" }
-    ],
-    "orderBillingData": [
-      {
-        "id": "1",
-        "type": "order",
-        "title": "Order Summary",
-        "awaitingCount": 2,
-        "nextDeliveryDate": "Oct 16",
-        "viewLinkText": "viewOrderDetails"
-      },
-      {
-        "id": "2",
-        "type": "billing",
-        "title": "Billing",
-        "totalAmount": "4",
-        "overdueAmount": "1",
-        "viewLinkText": "View Order  Details"
-      },
-      {
-        "id": "3",
-        "type": "order",
-        "title": "Order Summary",
-        "awaitingCount": 5,
-        "nextDeliveryDate": "Nov 20",
-        "viewLinkText": "View Order Details"
-      },
-      {
-        "id": "4",
-        "type": "billing",
-        "title": "Billing",
-        "totalAmount": "8",
-        "overdueAmount": "2",
-        "viewLinkText": "View Order Details"
-      }
-    ]
-  }
+  "error": false,
+  "customer": {
+    "id": 101,
+    "fullname": "Customer",
+    "email": "customer@gmail.com",
+    "phone": "9988776651",
+    "blood_group": "O+",
+    "date_of_birth": "01 Jan 2026",
+    "joining_date": "20 Jan 2026",
+    "card_number": null
+  },
+  "health_card": {
+    "id": 121,
+    "card_holder_name": "Customer",
+    "gender": "Male",
+    "age_category": "Adult",
+    "membership_id": "HC-2026-000121",
+    "aadhaar_number": "**********8677",
+    "blood_group": "O+",
+    "date_of_issue": "Jan 2026",
+    "date_of_expiry": "Jan 2027",
+    "phone": "9988776651",
+    "email": "customer@gmail.com",
+    "address": "Hyderbad naampally",
+    "city": "Hyderabad",
+    "state_id": null,
+    "pincode": "500028",
+    "type": "family",
+    "created_at": "20 Jan 2026 16:17",
+    "updated_at": "20 Jan 2026 16:17"
+  },
+  "family_members": [
+    {
+      "id": "fm-1768925778050",
+      "name": "Family member 1",
+      "relationship": "Brother",
+      "aadhaar_number": "6868 6878 7878",
+      "blood_group": "O+",
+      "date_of_birth": "2026-01-14",
+      "gender": "Male",
+      "age_category": "Adult"
+    },
+    {
+      "id": "fm-1768925798396",
+      "name": "Family member 2",
+      "relationship": "Brother",
+      "aadhaar_number": "7676 5655 6664",
+      "blood_group": "O+",
+      "date_of_birth": "2026-01-01",
+      "gender": "Male",
+      "age_category": "Adult"
+    }
+  ],
+  "featured_partners": [
+    {
+      "order": 1,
+      "partner_details": "KimsSunshine Hospital Begumpet • 9874563210 • user@test.com",
+      "type": "Hospital",
+      "duration": "2025-12-31 to 2026-02-06",
+      "performance": "good",
+      "status": "Active",
+      "image_url": "https://www.kimssunshine.co.in/wp-content/uploads/2025/01/DJI_0204-3-768x432.jpg",
+      "learn_more_url": "https://www.kimssunshine.co.in/"
+    },
+    {
+      "order": 1,
+      "partner_details": "Demo • 7794955103 • shaikhasanali22@gmail.com",
+      "type": "Clinic",
+      "duration": "2026-01-14 to 2026-01-31",
+      "performance": "2",
+      "status": "Active",
+      "image_url": null,
+      "learn_more_url": "https://app.mhfglobal.com/"
+    },
+    {
+      "order": 1,
+      "partner_details": "New Test • 7794955103 • shaikhasanali22@gmail.com",
+      "type": "Hospital",
+      "duration": "2026-01-12 to 2026-01-28",
+      "performance": "111",
+      "status": "Active",
+      "image_url": null,
+      "learn_more_url": "https://google.com"
+    },
+    {
+      "order": 12,
+      "partner_details": "Sunshine Super Specialty Hospital • 9876543210 • Test101@gmail.com",
+      "type": "Hospital",
+      "duration": "2026-01-19 to 2026-01-20",
+      "performance": "Average performance with moderate customer traffic",
+      "status": "Active",
+      "image_url": "https://d3upjtc0wh66ez.cloudfront.net/wp-content/uploads/2023/12/yashoda-hospitals-logo.png",
+      "learn_more_url": "https://i.ytimg.com/vi/wlctA0MP8rc/maxresdefault.jpg"
+    },
+    {
+      "order": 22,
+      "partner_details": "Hasan Ali Foundation • 9988776651 • Test1211@gmail.com",
+      "type": "Hospital",
+      "duration": "2026-01-06 to 2026-01-27",
+      "performance": "Average performance with moderate customer traffic",
+      "status": "Active",
+      "image_url": "http://vmhes.in/img/Logo.png",
+      "learn_more_url": "https://www.yashodahospitals.com/"
+    },
+    {
+      "order": 22,
+      "partner_details": "Test 222 • 9988776651 • Test1211@email.com",
+      "type": "Hospital",
+      "duration": "2026-01-08 to 2026-01-16",
+      "performance": "Excellent service with high patient satisfaction",
+      "status": "Active",
+      "image_url": "https://karetrip-assets.s3.ap-south-1.amazonaws.com/hospital/Yashoda-Hospital-Hitec-City-Hyderabad.webp",
+      "learn_more_url": "https://www.yashodahospitals.com/"
+    },
+    {
+      "order": 22,
+      "partner_details": "Test 2 • 9876543210 • Test1011@gmail.com",
+      "type": "Hospital",
+      "duration": "2026-01-12 to 2026-01-28",
+      "performance": "Growing patient base and reliable service",
+      "status": "Active",
+      "image_url": "https://www.kimssunshine.co.in/wp-content/uploads/2025/01/DJI_0204-3-1024x576.jpg",
+      "learn_more_url": "https://example.com/green-valley"
+    },
+    {
+      "order": 50,
+      "partner_details": "vijay marie hospital • 6301191714 • mhf@gmail.com",
+      "type": "Hospital",
+      "duration": "2026-01-01 to 2027-01-01",
+      "performance": "best performances",
+      "status": "Active",
+      "image_url": "http://vmhes.in/img/about-1.png",
+      "learn_more_url": "http://vmhes.in/"
+    },
+    {
+      "order": 50,
+      "partner_details": "Shreya Hospital • 9876543210 • shreyahospital@gmail.com",
+      "type": "Hospital",
+      "duration": "2026-01-01 to 2027-12-31",
+      "performance": "good performance",
+      "status": "Active",
+      "image_url": "http://shreyahospital.com/partner-image.jpg",
+      "learn_more_url": "https://shreyahospitalss.com"
+    },
+    {
+      "order": 50,
+      "partner_details": "Kaaba Hospital • 8897572518 • kaaba@gmail.com",
+      "type": "Hospital",
+      "duration": "2026-01-01 to 2030-01-01",
+      "performance": "best performances",
+      "status": "Active",
+      "image_url": "http://vmhes.in/img/about-1.png",
+      "learn_more_url": "http://kaaba.com"
+    }
+  ]
+}
