@@ -13,3 +13,4 @@ export * from './BloodBank';
 export * from './Equipment';
 export * from './Ambulance';
 export * from './Volunteer';
+export * from './Notification';

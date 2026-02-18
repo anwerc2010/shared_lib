@@ -16,3 +16,4 @@ export * from './api/bloodBankApi';
 export * from './api/equipmentApi';
 export * from './api/ambulanceApi';
 export * from './api/volunteerApi';
+export * from './api/notificationApi';
