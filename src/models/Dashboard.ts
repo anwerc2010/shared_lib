@@ -1,11 +1,11 @@
-export interface Customer {
+export interface DashboardCustomer {
   id: number;
   fullname: string;
   email: string;
   phone: string;
-  blood_group: string;
-  date_of_birth: string;
-  joining_date: string;
+  blood_group: string | null;
+  date_of_birth: string | null;
+  joining_date: string | null;
   card_number: string | null;
 }
 
@@ -22,21 +22,20 @@ export interface HealthCard {
   phone: string;
   email: string;
   address: string;
-  city: string;
-  state_id: string | null;
-  pincode: string;
+  city: string | null;
+  state_id: number;
+  pincode: string | null;
   type: string;
   created_at: string;
   updated_at: string;
 }
 
 export interface FamilyMember {
-  id: string;
   name: string;
   relationship: string;
+  date_of_birth: string;
   aadhaar_number: string;
   blood_group: string;
-  date_of_birth: string;
   gender: string;
   age_category: string;
 }
@@ -46,7 +45,7 @@ export interface FeaturedPartner {
   partner_details: string;
   type: string;
   duration: string | null;
-  performance: string;
+  performance: string | null;
   status: string;
   image_url: string;
   learn_more_url: string;
@@ -55,17 +54,15 @@ export interface FeaturedPartner {
 export interface CardRequest {
   id: number;
   status: string;
-  review_notes: string | null;
-  requested_at: string;
-  updated_at: string;
+  requested_at?: string;
+  updated_at?: string;
 }
 
 export interface Dashboard {
   error: boolean;
-  customer: Customer;
+  customer: DashboardCustomer;
   health_card: HealthCard | null;
   family_members: FamilyMember[];
   featured_partners: FeaturedPartner[];
   card_requests: CardRequest[];
 }
-

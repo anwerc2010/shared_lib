@@ -1,23 +1,27 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-const getApiBaseUrl = (): string => {
-  if (typeof window !== 'undefined') {
+export const getApiBaseUrl = (): string => {
+  if (typeof window !== "undefined") {
     // Browser/Client-side: Use NEXT_PUBLIC_ prefix for Next.js
-    return process.env.NEXT_PUBLIC_API_BASE_URL || process.env.API_BASE_URL || 'https://api.mhfglobal.com/api';
+    return (
+      process.env.NEXT_PUBLIC_API_BASE_URL ||
+      process.env.API_BASE_URL ||
+      "http://13.127.77.119:8080/api"
+    );
   }
   // Server-side
-  return process.env.API_BASE_URL || 'https://api.mhfglobal.com/api';
+  return process.env.API_BASE_URL || "http://13.127.77.119:8080/api";
 };
 
 export const baseApi = createApi({
-  reducerPath: 'api',
+  reducerPath: "api",
   baseQuery: fetchBaseQuery({
     baseUrl: getApiBaseUrl(),
     prepareHeaders: (headers, { getState }) => {
       const token = (getState() as any)?.auth?.token;
-      if (token) headers.set('Authorization', `Bearer ${token}`);
+      if (token) headers.set("Authorization", `Bearer ${token}`);
       return headers;
-    }
+    },
   }),
   endpoints: () => ({}),
 });

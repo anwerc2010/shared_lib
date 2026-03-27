@@ -104,3 +104,29 @@ export interface ResetPasswordResponse {
     password?: string[];
   };
 }
+
+export interface UpdateCustomerPayload {
+  fullname: string;
+  email: string;
+  phone: string;
+  date_of_birth: string;
+  joining_date: string;
+  blood_group: string;
+  allergies?: string;
+  chronic_conditions?: string;
+  emergency_contact_number?: string;
+  card_number?: string;
+  status?: string;
+  password?: string;
+}
+
+export interface UpdateCustomerRequest {
+  id: number | string;
+  data: UpdateCustomerPayload;
+}
+
+export interface UpdateCustomerResponse {
+  error: boolean;
+  message: string;
+  data: User;
+}

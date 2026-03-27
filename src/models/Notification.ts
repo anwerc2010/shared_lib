@@ -23,17 +23,14 @@ export interface NotificationItem {
   image: string | null;
   reason: string;
   created_at: string;
-  is_read: boolean | number;
-  read_at: string | null;
 }
 
 export interface GetNotificationsResponse {
-  error: boolean;
-  count: number;
+  success: boolean;
   data: NotificationItem[];
 }
 
 export interface MarkNotificationAsReadResponse {
-  error: boolean;
+  success: boolean;
   message: string;
 }
