@@ -6,6 +6,10 @@ import {
   RegisterResponse,
   ForgotPasswordRequest,
   ForgotPasswordResponse,
+  SendOtpRequest,
+  SendOtpResponse,
+  VerifyOtpRequest,
+  VerifyOtpResponse,
   ResetPasswordRequest,
   ResetPasswordResponse,
 } from "../models/Account";
@@ -39,6 +43,20 @@ export const authApi = baseApi.injectEndpoints({
         body,
       }),
     }),
+    sendOtp: builder.mutation<SendOtpResponse, SendOtpRequest>({
+      query: (body) => ({
+        url: "/customer/send-otp",
+        method: "POST",
+        body,
+      }),
+    }),
+    verifyOtp: builder.mutation<VerifyOtpResponse, VerifyOtpRequest>({
+      query: (body) => ({
+        url: "/customer/verify-otp",
+        method: "POST",
+        body,
+      }),
+    }),
     resetPassword: builder.mutation<
       ResetPasswordResponse,
       ResetPasswordRequest
@@ -57,5 +75,7 @@ export const {
   useRegisterMutation,
   useGetProfileQuery,
   useForgotPasswordMutation,
+  useSendOtpMutation,
+  useVerifyOtpMutation,
   useResetPasswordMutation,
 } = authApi;

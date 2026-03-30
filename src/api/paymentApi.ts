@@ -19,7 +19,7 @@ export const paymentApi = baseApi.injectEndpoints({
     }),
     createOrder: builder.mutation<CreateOrderResponse, CreateOrderPayload>({
       query: (payload) => ({
-        url: "/customer/payments/create-order",
+        url: "/payments/create-order",
         method: "POST",
         body: payload,
       }),
@@ -29,7 +29,7 @@ export const paymentApi = baseApi.injectEndpoints({
       VerifyPaymentPayload
     >({
       query: (payload) => ({
-        url: "/customer/payments/verify",
+        url: "/payments/verify-payment",
         method: "POST",
         body: payload,
       }),

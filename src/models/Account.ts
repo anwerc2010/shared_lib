@@ -91,8 +91,33 @@ export interface ForgotPasswordResponse {
   };
 }
 
+export interface SendOtpRequest {
+  email: string;
+}
+
+export interface SendOtpResponse {
+  error: boolean;
+  message: string;
+  errors?: {
+    email?: string[];
+  };
+}
+
+export interface VerifyOtpRequest {
+  otp: string;
+}
+
+export interface VerifyOtpResponse {
+  error: boolean;
+  message: string;
+  errors?: {
+    otp?: string[];
+  };
+}
+
 export interface ResetPasswordRequest {
-  token: string;
+  email?: string;
+  token?: string;
   password: string;
   password_confirmation: string;
 }

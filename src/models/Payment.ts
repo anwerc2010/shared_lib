@@ -15,10 +15,16 @@ export interface PricingResponse {
 }
 
 export interface CreateOrderPayload {
-  customer_id: number;
+  customer_id?: number | string;
   health_card_id?: number;
-  card_type: "individual" | "family";
-  purpose: "new" | "renewal";
+  card_type?: "individual" | "family";
+  purpose?: "new" | "renewal";
+  amount?: number;
+  payment_type?: "donation" | "sponsorship" | string;
+  module?: "education" | "events" | "relief" | string;
+  module_id?: number | string;
+  currency?: string;
+  donor_message?: string;
 }
 
 export interface OrderData {
@@ -28,6 +34,9 @@ export interface OrderData {
   amount: number;
   currency: string;
   requires_payment: boolean;
+  payment_type?: string;
+  module?: string;
+  module_id?: number | string;
 }
 
 export interface CreateOrderResponse {
@@ -61,6 +70,9 @@ export interface PaymentRecord {
   currency: string;
   status: "pending" | "paid" | "failed" | "refunded";
   health_card_id?: number;
+  payment_type?: string;
+  module?: string;
+  module_id?: number | string;
   created_at: string;
   updated_at: string;
   notes?: {
@@ -70,8 +82,11 @@ export interface PaymentRecord {
 
 export interface VerifyPaymentResult {
   payment: PaymentRecord;
-  health_card_id: number;
-  status: string;
+  health_card_id?: number;
+  status?: string;
+  payment_type?: string;
+  module?: string;
+  module_id?: number | string;
 }
 
 export interface VerifyPaymentResponse {
