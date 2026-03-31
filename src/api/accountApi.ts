@@ -33,7 +33,7 @@ export const accountApi = baseApi.injectEndpoints({
 
         // Fallback for older servers expecting legacy route + method override.
         const fallback = await baseQuery({
-          url: `/customer/update/${id}?_method=PUT`,
+          url: `/customer/${id}?_method=PUT`,
           method: "POST",
           body: data,
         });

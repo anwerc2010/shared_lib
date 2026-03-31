@@ -82,7 +82,8 @@ export interface PaymentRecord {
 
 export interface VerifyPaymentResult {
   payment: PaymentRecord;
-  health_card_id?: number;
+  health_card_id?: number | null;
+  card_created?: boolean;
   status?: string;
   payment_type?: string;
   module?: string;

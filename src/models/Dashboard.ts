@@ -54,8 +54,19 @@ export interface FeaturedPartner {
 export interface CardRequest {
   id: number;
   status: string;
+  payment_type?: "free" | "paid" | string;
+  payment_status?: "free" | "pending" | "paid" | "failed" | null;
+  can_apply?: boolean;
+  can_pay?: boolean;
+  active_payment_order_id?: string | null;
+  review_notes?: string | null;
   requested_at?: string;
   updated_at?: string;
+  razorpay_order_id?: string | null;
+  razorpay_key_id?: string | null;
+  amount?: number | null;
+  customer_id?: number | null;
+  health_card_id?: number | null;
 }
 
 export interface Dashboard {

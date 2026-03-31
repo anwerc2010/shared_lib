@@ -118,9 +118,16 @@ export interface PaymentData {
 }
 
 export interface HealthCardResponseData {
-  health_card: ApplyHealthCard;
+  health_card: ApplyHealthCard | null;
   customer: CustomerData;
+  requires_payment?: boolean;
   payment?: PaymentData;
+  card_created?: boolean;
+  payment_type?: "free" | "paid" | string;
+  payment_status?: "free" | "pending" | "paid" | "failed" | string;
+  can_apply?: boolean;
+  can_pay?: boolean;
+  active_payment_order_id?: string | null;
 }
 
 export interface HealthCardResponse {

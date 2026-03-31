@@ -117,6 +117,7 @@ export interface VerifyOtpResponse {
 
 export interface ResetPasswordRequest {
   email?: string;
+  otp?: string;
   token?: string;
   password: string;
   password_confirmation: string;
