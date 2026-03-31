@@ -15,8 +15,21 @@ export interface LoginRequest {
 
 export interface LoginResponse {
   error: boolean;
-  token: string;
+  access_token: string;
+  refresh_token: string;
+  expires_in: number;
   customer: User;
+}
+
+export interface RefreshTokenRequest {
+  refresh_token: string;
+}
+
+export interface RefreshTokenResponse {
+  access_token: string;
+  refresh_token: string;
+  expires_in: number;
+  refresh_expires_in?: number;
 }
 
 export interface RegisterRequest {

@@ -12,6 +12,8 @@ import {
   VerifyOtpResponse,
   ResetPasswordRequest,
   ResetPasswordResponse,
+  RefreshTokenRequest,
+  RefreshTokenResponse,
 } from "../models/Account";
 
 export const authApi = baseApi.injectEndpoints({
@@ -67,6 +69,13 @@ export const authApi = baseApi.injectEndpoints({
         body,
       }),
     }),
+    refreshToken: builder.mutation<RefreshTokenResponse, RefreshTokenRequest>({
+      query: (body) => ({
+        url: "/customer/refresh",
+        method: "POST",
+        body,
+      }),
+    }),
   }),
 });
 
@@ -78,4 +87,5 @@ export const {
   useSendOtpMutation,
   useVerifyOtpMutation,
   useResetPasswordMutation,
+  useRefreshTokenMutation,
 } = authApi;
