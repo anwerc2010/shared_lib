@@ -10,7 +10,7 @@ export const notificationApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({
     getNotifications: builder.query<GetNotificationsResponse, void>({
       query: () => ({
-        url: "/customer/notifications",
+        url: "/notifications",
         method: "GET",
       }),
     }),
