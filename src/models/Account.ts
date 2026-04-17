@@ -9,7 +9,7 @@ export interface Account {
 }
 
 export interface LoginRequest {
-  email: string;
+  login: string;
   password: string;
 }
 
@@ -47,6 +47,7 @@ export interface RegisterRequest {
   reference_name: string;
   reference_contact: string;
   consent: boolean;
+  aadhaar_number?: string;
 }
 
 export interface FamilyMember2 {

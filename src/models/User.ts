@@ -8,6 +8,7 @@ export interface User {
   date_of_birth: string | null;
   joining_date: string | null;
   card_number: string | null;
+  aadhaar_number: string | null;
   allergies: string | null;
   chronic_conditions: string | null;
   emergency_contact_number: string | null;
