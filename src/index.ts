@@ -20,3 +20,5 @@ export * from "./api/notificationApi";
 export * from "./hooks/useLocationDropdowns";
 export * from "./api/paymentApi";
 export * from "./models/Payment";
+export * from "./api/professionApi";
+export * from "./models/Profession";
