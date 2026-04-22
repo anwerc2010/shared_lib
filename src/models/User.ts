@@ -12,6 +12,7 @@ export interface User {
   allergies: string | null;
   chronic_conditions: string | null;
   emergency_contact_number: string | null;
+  image?: string | null;
   created_at?: string;
   updated_at?: string;
 }

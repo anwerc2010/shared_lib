@@ -14,6 +14,7 @@ import {
   ResetPasswordResponse,
   RefreshTokenRequest,
   RefreshTokenResponse,
+  UploadCustomerImageResponse,
 } from "../models/Account";
 
 export const authApi = baseApi.injectEndpoints({
@@ -76,6 +77,13 @@ export const authApi = baseApi.injectEndpoints({
         body,
       }),
     }),
+    uploadCustomerImage: builder.mutation<UploadCustomerImageResponse, FormData>({
+      query: (formData) => ({
+        url: "/customer/upload-customer-image",
+        method: "POST",
+        body: formData,
+      }),
+    }),
   }),
 });
 
@@ -88,4 +96,5 @@ export const {
   useVerifyOtpMutation,
   useResetPasswordMutation,
   useRefreshTokenMutation,
+  useUploadCustomerImageMutation,
 } = authApi;

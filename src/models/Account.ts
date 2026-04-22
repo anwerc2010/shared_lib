@@ -48,6 +48,7 @@ export interface RegisterRequest {
   reference_contact: string;
   consent: boolean;
   aadhaar_number?: string;
+  image?: string;
 }
 
 export interface FamilyMember2 {
@@ -158,6 +159,13 @@ export interface UpdateCustomerPayload {
   card_number?: string;
   status?: string;
   password?: string;
+  image?: string;
+}
+
+export interface UploadCustomerImageResponse {
+  error: boolean;
+  message: string;
+  image_url: string;
 }
 
 export interface UpdateCustomerRequest {
