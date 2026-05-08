@@ -1,5 +1,5 @@
 import { baseApi } from "./baseApi";
-import { ProvidersResponse } from "../models/Providers";
+import { ProvidersResponse, LocationProviderParams } from "../models/Providers";
 
 export const providersApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({
@@ -9,7 +9,17 @@ export const providersApi = baseApi.injectEndpoints({
         method: "GET",
       }),
     }),
+    getProvidersByLocation: builder.query<
+      ProvidersResponse,
+      LocationProviderParams
+    >({
+      query: ({ latitude, longitude, radius }) => ({
+        url: `/providers/location?latitude=${latitude}&longitude=${longitude}&radius=${radius}`,
+        method: "GET",
+      }),
+    }),
   }),
 });
 
-export const { useGetProvidersQuery } = providersApi;
+export const { useGetProvidersQuery, useGetProvidersByLocationQuery } =
+  providersApi;

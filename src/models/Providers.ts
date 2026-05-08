@@ -17,6 +17,7 @@ export interface Provider {
     longitude: number;
     map_url: string;
     rating: number;
+    distance_km?: number;
     created_at: string;
     updated_at: string;
 }
@@ -26,4 +27,10 @@ export interface ProvidersResponse {
     message: string;
     total: number;
     data: Provider[];
+}
+
+export interface LocationProviderParams {
+    latitude: number;
+    longitude: number;
+    radius: number;
 }

@@ -106,6 +106,8 @@ export interface ApplyHealthCard {
   updated_at?: string;
   customer?: CustomerData;
   family_head_image?: string;
+  aadhaar_image?: string;
+  address_image?: string;
   reference_name?: string | null;
   professions?: string | null;
 }
