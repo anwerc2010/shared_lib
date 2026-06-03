@@ -22,3 +22,4 @@ export * from "./api/paymentApi";
 export * from "./models/Payment";
 export * from "./api/professionApi";
 export * from "./models/Profession";
+export * from "./api/benefitsApi";

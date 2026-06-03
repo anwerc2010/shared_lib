@@ -15,3 +15,4 @@ export * from "./Equipment";
 export * from "./Ambulance";
 export * from "./Volunteer";
 export * from "./Notification";
+export * from "./Benefit";
