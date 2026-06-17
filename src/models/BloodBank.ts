@@ -13,9 +13,8 @@ export interface BloodRequestPayload {
   doctor_contact: string;
   requester_name: string;
   requester_mobile: string;
-  email: string;
+  email?: string;
   remarks: string;
-  status: string;
   address: string;
   city: string;
   district: string;

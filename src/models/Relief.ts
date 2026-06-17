@@ -138,7 +138,6 @@ export interface CreateReliefRequestPayload {
   mandal?: string;
   pincode?: string;
   customer_id?: number;
-  status?: string;
   declaration: boolean;
 }
 

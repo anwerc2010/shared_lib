@@ -121,6 +121,19 @@ export interface PaymentData {
   requires_payment: boolean;
 }
 
+export interface ZohoSyncDetail {
+  code: string;
+  details: {
+    id: string;
+    Modified_Time?: string;
+    Created_Time?: string;
+    Modified_By?: { name: string; id: string };
+    Created_By?: { name: string; id: string };
+  };
+  message: string;
+  status: string;
+}
+
 export interface HealthCardResponseData {
   health_card: ApplyHealthCard | null;
   customer: CustomerData;
@@ -132,6 +145,10 @@ export interface HealthCardResponseData {
   can_apply?: boolean;
   can_pay?: boolean;
   active_payment_order_id?: string | null;
+  card_request?: CardRequestData;
+  zoho_synced?: boolean;
+  zoho_message?: string;
+  zoho_response?: { data: ZohoSyncDetail[] } | null;
 }
 
 export interface HealthCardResponse {
