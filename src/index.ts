@@ -23,3 +23,5 @@ export * from "./models/Payment";
 export * from "./api/professionApi";
 export * from "./models/Profession";
 export * from "./api/benefitsApi";
+export * from "./api/healthCardAdminApi";
+export * from "./models/HealthCardAdmin";

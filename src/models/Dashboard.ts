@@ -11,6 +11,7 @@ export interface DashboardCustomer {
 
 export interface HealthCard {
   id: number;
+  customer_id: number;
   card_holder_name: string;
   gender: string;
   age_category: string;
@@ -26,6 +27,10 @@ export interface HealthCard {
   state_id: number;
   pincode: string | null;
   type: string;
+  mode: 'walk_in' | 'free' | 'online' | null;
+  status: 'pending' | 'approved' | 'active' | 'expired' | 'rejected' | 'suspended';
+  renewal_count?: number;
+  card_category?: string | null;
   created_at: string;
   updated_at: string;
 }
