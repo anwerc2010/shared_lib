@@ -111,3 +111,57 @@ export interface HealthCardsByStatusResponse {
   count: number;
   data: HealthCardItem[];
 }
+
+export interface HealthCardStatusCountsResponse {
+  error: boolean;
+  message: string;
+  data: {
+    pending: number;
+    approved: number;
+    rejected: number;
+    active: number;
+    expired: number;
+  };
+}
+
+export interface HealthCardSearchMeta {
+  total: number;
+  per_page: number;
+  current_page: number;
+  last_page: number;
+}
+
+export interface HealthCardSearchResponse {
+  error: boolean;
+  message: string;
+  data: HealthCardItem[];
+  meta: HealthCardSearchMeta;
+}
+
+export interface HealthCardAdminReportsData {
+  status_counts: {
+    pending: number;
+    approved: number;
+    active: number;
+    rejected: number;
+    expired: number;
+    total: number;
+  };
+  mode_counts: {
+    walk_in: number;
+    online: number;
+    free: number;
+  };
+  category_counts: {
+    new_cards: number;
+    renewals: number;
+  };
+  today_count: number;
+  this_month_count: number;
+}
+
+export interface HealthCardAdminReportsResponse {
+  error: boolean;
+  message: string;
+  data: HealthCardAdminReportsData;
+}

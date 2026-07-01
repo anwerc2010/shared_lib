@@ -6,7 +6,16 @@ import {
   HealthCardsByStatusResponse,
   UpdateHealthCardStatusRequest,
   UpdateHealthCardStatusResponse,
+  HealthCardStatusCountsResponse,
+  HealthCardSearchResponse,
+  HealthCardAdminReportsResponse,
 } from '../models/HealthCardAdmin';
+
+export interface HealthCardSearchArgs {
+  q: string;
+  page?: number;
+  per_page?: number;
+}
 
 export const healthCardAdminApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({
@@ -42,6 +51,27 @@ export const healthCardAdminApi = baseApi.injectEndpoints({
         body: { status },
       }),
     }),
+
+    getHealthCardStatusCounts: builder.query<HealthCardStatusCountsResponse, void>({
+      query: () => ({
+        url: '/health-cards/status-counts',
+        method: 'GET',
+      }),
+    }),
+
+    searchHealthCards: builder.query<HealthCardSearchResponse, HealthCardSearchArgs>({
+      query: ({ q, page = 1, per_page = 20 }) => ({
+        url: `/health-cards/search?q=${encodeURIComponent(q)}&page=${page}&per_page=${per_page}`,
+        method: 'GET',
+      }),
+    }),
+
+    getHealthCardAdminReports: builder.query<HealthCardAdminReportsResponse, void>({
+      query: () => ({
+        url: '/health-cards/admin-reports',
+        method: 'GET',
+      }),
+    }),
   }),
 });
 
@@ -50,4 +80,7 @@ export const {
   useGetHealthCardsQuery,
   useGetHealthCardsByStatusQuery,
   useUpdateHealthCardStatusMutation,
+  useGetHealthCardStatusCountsQuery,
+  useSearchHealthCardsQuery,
+  useGetHealthCardAdminReportsQuery,
 } = healthCardAdminApi;
