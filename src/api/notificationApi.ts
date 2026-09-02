@@ -1,5 +1,6 @@
 import { baseApi } from "./baseApi";
 import {
+  DismissNotificationResponse,
   GetNotificationsResponse,
   MarkNotificationAsReadResponse,
   SaveNotificationTokenRequest,
@@ -13,6 +14,7 @@ export const notificationApi = baseApi.injectEndpoints({
         url: "/notifications",
         method: "GET",
       }),
+      providesTags: ["Notification"],
     }),
     markNotificationAsRead: builder.mutation<
       MarkNotificationAsReadResponse,
@@ -22,6 +24,17 @@ export const notificationApi = baseApi.injectEndpoints({
         url: `/staff/notifications/read/${notificationId}`,
         method: "POST",
       }),
+      invalidatesTags: ["Notification"],
+    }),
+    dismissNotification: builder.mutation<
+      DismissNotificationResponse,
+      number | string
+    >({
+      query: (notificationId) => ({
+        url: `/customer/notifications/${notificationId}`,
+        method: "DELETE",
+      }),
+      invalidatesTags: ["Notification"],
     }),
     saveNotificationToken: builder.mutation<
       SaveNotificationTokenResponse,
@@ -39,5 +52,6 @@ export const notificationApi = baseApi.injectEndpoints({
 export const {
   useGetNotificationsQuery,
   useMarkNotificationAsReadMutation,
+  useDismissNotificationMutation,
   useSaveNotificationTokenMutation,
 } = notificationApi;

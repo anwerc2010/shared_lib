@@ -34,3 +34,8 @@ export interface MarkNotificationAsReadResponse {
   success: boolean;
   message: string;
 }
+
+export interface DismissNotificationResponse {
+  success: boolean;
+  message: string;
+}

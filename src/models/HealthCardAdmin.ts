@@ -27,6 +27,16 @@ export type HealthCardStatus =
 
 export type HealthCardStatusUpdate = 'approved' | 'rejected' | 'pending';
 
+export type HealthCardTab =
+  | 'all'
+  | 'family'
+  | 'expired'
+  | 'expiring'
+  | 'pending'
+  | 'renewal'
+  | 'approved'
+  | 'rejected';
+
 export interface HealthCardFamilyMember {
   id: string;
   name: string;
@@ -44,6 +54,7 @@ export interface HealthCardAdminCustomer {
   email: string;
   phone: string;
   status?: string;
+  aadhaar_number?: string;
 }
 
 export interface HealthCardItem {
@@ -64,6 +75,8 @@ export interface HealthCardItem {
   gender: 'Male' | 'Female';
   age_category: 'Child' | 'Adult';
   mode?: 'walk_in' | 'free' | 'online' | null;
+  card_category?: 'new' | 'renewal' | string | null;
+  reference_name?: string | null;
   date_of_issue?: string | null;
   date_of_expiry?: string | null;
   rejection_reason?: string | null;
@@ -83,15 +96,15 @@ export interface HealthCardListMeta {
   last_page: number;
   per_page: number;
   total: number;
-  tab: string;
+  tab: HealthCardTab;
 }
 
 export interface HealthCardListResponse {
   error: boolean;
   message: string;
   data: HealthCardListItemRaw[];
-  meta?: HealthCardListMeta;
-  counts?: Record<string, number>;
+  meta: HealthCardListMeta;
+  counts: Record<string, number>;
 }
 
 export interface UpdateHealthCardStatusRequest {
@@ -103,6 +116,27 @@ export interface UpdateHealthCardStatusResponse {
   error: boolean;
   message: string;
   status: string;
+}
+
+// PUT /health-card/{id}/status only accepts approved/rejected/pending and
+// always sends a status-change email — wrong tool for suspend/activate.
+// The general PUT /health-card/update/{id} endpoint accepts any status
+// string (validated as 'sometimes|string' server-side) and sends no email,
+// which is what the web admin actually uses for its "Suspended" option.
+export type HealthCardLifecycleStatus = 'active' | 'suspended';
+
+export interface SetHealthCardLifecycleStatusRequest {
+  id: number;
+  status: HealthCardLifecycleStatus;
+}
+
+export interface SetHealthCardLifecycleStatusResponse {
+  error: boolean;
+  message: string;
+  data: {
+    health_card: HealthCardItem;
+    customer: HealthCardAdminCustomer | null;
+  };
 }
 
 export interface HealthCardsByStatusResponse {
@@ -165,3 +199,33 @@ export interface HealthCardAdminReportsResponse {
   message: string;
   data: HealthCardAdminReportsData;
 }
+
+export interface HealthCardByIdResponse {
+  error: boolean;
+  message: string;
+  data: {
+    health_card: HealthCardItem;
+    customer: HealthCardAdminCustomer | null;
+    renewals: unknown[];
+  };
+}
+
+// GET /health-cards/analytics — dashboard summary. active_cards here is
+// date-aware (date_of_expiry >= today AND status NOT IN suspended/pending),
+// distinct from HealthCardAdminReportsData.status_counts.active which is a
+// raw count of rows where the status column literally says "active" (can
+// include cards that are expired by date but never had status updated).
+export interface HealthCardAnalyticsData {
+  new_cards_this_month: number;
+  renewal_cards_this_month: number;
+  total_cards: number;
+  expiring_cards_this_month: number;
+  active_cards: number;
+  total_revenue: number;
+  free_camp_cards: number;
+  new_cards_today: number;
+  renewal_cards_today: number;
+  rejected_cards_today: number;
+}
+
+export type HealthCardAnalyticsResponse = HealthCardAnalyticsData;

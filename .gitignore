@@ -88,3 +88,5 @@ tmp/
 .yarn/install-state.gz
 .pnp.*
 
+
+.superpowers/

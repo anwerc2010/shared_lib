@@ -76,7 +76,7 @@ export interface FamilyMember1 {
   aadhaar_number: string;
   blood_group: string;
   date_of_birth: string;
-  gender: "Male" | "Female";
+  gender: "Male" | "Female" | "Other";
   age_category: "Child" | "Adult";
 }
 
@@ -100,7 +100,7 @@ export interface ApplyHealthCard {
   district_id?: number | null;
   block_id?: number | null;
   mandal_id?: number | null;
-  gender: "Male" | "Female";
+  gender: "Male" | "Female" | "Other";
   age_category: "Child" | "Adult";
   created_at?: string;
   updated_at?: string;
