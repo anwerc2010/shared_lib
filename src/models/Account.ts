@@ -178,3 +178,11 @@ export interface UpdateCustomerResponse {
   message: string;
   data: User;
 }
+
+// Apple 5.1.1(v) account deletion — always operates on the authenticated
+// customer's own account (server resolves it from the JWT), so no id/body
+// is needed on the request.
+export interface DeleteAccountResponse {
+  error: boolean;
+  message: string;
+}

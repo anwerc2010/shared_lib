@@ -3,6 +3,7 @@ import {
   Account,
   UpdateCustomerRequest,
   UpdateCustomerResponse,
+  DeleteAccountResponse,
 } from "../models/Account";
 
 export const accountApi = baseApi.injectEndpoints({
@@ -45,6 +46,14 @@ export const accountApi = baseApi.injectEndpoints({
         return { error: fallback.error } as any;
       },
     }),
+    // Apple 5.1.1(v) — permanently deletes the authenticated customer's own
+    // account. No id/body: the backend resolves the target from the JWT.
+    deleteAccount: builder.mutation<DeleteAccountResponse, void>({
+      query: () => ({
+        url: "/customer/account",
+        method: "DELETE",
+      }),
+    }),
   }),
 });
 
@@ -52,4 +61,5 @@ export const {
   useGetAccountQuery,
   useGetAccountsQuery,
   useUpdateCustomerMutation,
+  useDeleteAccountMutation,
 } = accountApi;
